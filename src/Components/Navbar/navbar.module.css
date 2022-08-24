@@ -1,0 +1,26 @@
+.navbarContainer{
+    display: flex;
+    background-color: transparent;
+    height: 70px;
+    margin-top: 50px;
+    margin-right: 10%;
+    margin-left: 10%;
+    justify-content: right;
+    box-shadow: rgb(41 49 85) 0px 5px 15px;
+}
+.navbarItem{
+    
+    font-size: 30px;
+    text-align: center;
+    align-self: flex-end;
+    cursor: pointer;
+    padding-right: 50px;
+    padding-bottom: 15px;
+}
+.navbarItem a {
+    text-decoration: none;
+    color: white;
+}
+.navbarItem a:hover {
+    color: rgb(154, 154, 205);
+}
