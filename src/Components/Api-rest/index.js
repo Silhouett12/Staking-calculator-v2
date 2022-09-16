@@ -36,7 +36,7 @@ const ApiRest = () => {
           <div className={styles.symbol}>SYMBOL</div>
           <div className={styles.currentPrice}>Current Price</div>
           <div className={styles.priceChange}>Price Change</div>
-          <div className={styles.priceChangePerHour} >Price Change Per Hour</div>
+          <div className={styles.priceChangePerHour}>Porcentage Change Per Hour</div>
         </li>
         {data
           ? data.map((el) => {
@@ -56,13 +56,13 @@ const ApiRest = () => {
                         : styles.priceChangeDown
                     }
                   >
-                    {el.priceChange}
+                  $ {el.priceChange}
                   </div>
                   <div 
                   className={
                     data.priceChangesPerHour > 0 ? styles.priceChangePerHourUp : styles.priceChangePerHourDown 
                    }>
-                    {el.priceChangePerHour}
+                    % {el.priceChangePerHour}
                   </div>
                 </li>
               );
