@@ -58,7 +58,7 @@ ul {
 }
 
 
-.priceChangeUp, .priceChangeDown, .priceChangePerHourDown, .priceChangePerHourUp {
+.priceChangeUp, .priceChangeDown, .priceChangePerHourDown, .priceChangePerHourUp, .priceChange, .priceChangePerHour {
     width: 230px;
 }
 
@@ -70,6 +70,13 @@ ul {
     color: red; 
 }
 
+
+.priceChange {
+    color: white;
+}
+.priceChangePerHour {
+    color: white;
+}
 .priceChangePerHourUp{
     color: green;
     padding-right: 30px;
@@ -78,4 +85,17 @@ ul {
 .priceChangePerHourDown{
     color: red;
     padding-right: 30px;
+}
+
+
+@media (max-width: 1024px) {
+
+    .priceChange, .priceChangePerHour {
+        display: none;
+    }
+
+    .priceChangeUp, .priceChangeDown, .priceChangePerHourDown, .priceChangePerHourUp {
+        display: none;
+    }
+
 }
