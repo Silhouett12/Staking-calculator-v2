@@ -11,6 +11,7 @@ const Calculator = () => {
     const [result, setResult] = React.useState()
 
     const handleInputChange = (e) => {
+        console.log(input.amount)
         setInput({
           ...input,
           [e.target.name]: e.target.value
