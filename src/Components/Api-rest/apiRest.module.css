@@ -1,0 +1,81 @@
+.title {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.symbol {
+    width: 100px;
+}
+.img {
+    width: 100px;
+    height: 100px;
+}
+.coinInfo {
+    display: flex;
+    width: 80%;
+    padding: 20px;
+    margin-top: 60px;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: rgb(41 49 85);
+}
+.listPrice {
+    display: flex;
+    width: 80%;
+    padding: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    align-items: center;
+    color: white;
+}
+
+.nameDiv {
+    display: flex;
+}
+
+.id {
+    width: 30px;
+      
+}
+.name {
+    width: 70px;
+    
+}
+.currentPrice {
+    width: 120px;
+   text-align: center;
+}
+
+
+.priceChangeUp, .priceChangeDown, .priceChangePerHourDown, .priceChangePerHourUp {
+    width: 230px;
+}
+
+.priceChangeUp{
+    color: green;
+}
+
+.priceChangeDown{ 
+    color: red; 
+}
+
+.priceChangePerHourUp{
+    color: green;
+    padding-right: 30px;
+}
+
+.priceChangePerHourDown{
+    color: red;
+    padding-right: 30px;
+}
