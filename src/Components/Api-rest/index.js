@@ -23,12 +23,22 @@ const ApiRest = () => {
 
   useEffect(() => {
     getApiInfo();
-  }, []);
+  }, [])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      getApiInfo();
+    }, 10000);
+    return () => {
+      clearInterval(interval) 
+    };
+  }, [data]);
+
   return (
-    <div>
+    <>
       <h1 className={styles.title}>TOP 10 COINS</h1>
-      <tr>
-        <td className={styles.coinInfo}>
+      <div className={styles.mainDiv}>
+        <div className={styles.coinInfo}>
           <div className={styles.nameDiv}>
             <div className={styles.id}>#</div>
             <div className={styles.name}>COIN</div>
@@ -39,52 +49,42 @@ const ApiRest = () => {
           <div className={styles.priceChangePerHour}>
             Porcentage Change Per Hour
           </div>
-        </td>
+        </div>
         {data
           ? data.map((el, index) => {
               return (
-               
-                (
-                  <td className={styles.listPrice} key={index}>
-                    <div className={styles.nameDiv}>
-                      <div className={styles.id}>{el.id}</div>
-                      <div className={styles.name}>{el.name}</div>
-                    </div>
+                <div className={styles.listPrice} key={index}>
+                  <div className={styles.nameDiv}>
+                    <div className={styles.id}>{el.id}</div>
+                    <div className={styles.name}>{el.name}</div>
+                  </div>
 
-                    <img
-                      className={styles.symbol}
-                      src={el.image}
-                      alt={el.name}
-                    />
-                    <div className={styles.currentPrice}>
-                      {" "}
-                      {el.currentPrice}
-                    </div>
-                    <div
-                      className={
-                        (Math.sign(el.priceChange) < 0
-                          ? styles.priceChangeDown
-                          : styles.priceChangeUp)
-                      }
-                    >
-                      $ {el.priceChange}
-                    </div>
-                    <div
-                      className={
-                        Math.sign(el.priceChangePerHour) > 0
-                          ? styles.priceChangePerHourUp
-                          : styles.priceChangePerHourDown
-                      }
-                    >
-                      % {el.priceChangePerHour}
-                    </div>
-                  </td>
-                )
+                  <img className={styles.symbol} src={el.image} alt={el.name} />
+                  <div className={styles.currentPrice}> {el.currentPrice}</div>
+                  <div
+                    className={
+                      Math.sign(el.priceChange) < 0
+                        ? styles.priceChangeDown
+                        : styles.priceChangeUp
+                    }
+                  >
+                    $ {el.priceChange}
+                  </div>
+                  <div
+                    className={
+                      Math.sign(el.priceChangePerHour) > 0
+                        ? styles.priceChangePerHourUp
+                        : styles.priceChangePerHourDown
+                    }
+                  >
+                    % {el.priceChangePerHour}
+                  </div>
+                </div>
               );
             })
           : "...loading"}
-      </tr>
-    </div>
+      </div>
+    </>
   );
 };
 
