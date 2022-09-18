@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./apiRest.module.css";
 const ApiRest = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   const getApiInfo = async () => {
     const url = await axios.get(
@@ -14,8 +14,8 @@ const ApiRest = () => {
         name: e.name,
         image: e.image,
         currentPrice: e.current_price,
-        priceChange: e.price_change_24h,
-        priceChangePerHour: e.price_change_percentage_1h_in_currency,
+        priceChange: e.price_change_24h.toFixed(6),
+        priceChangePerHour: e.price_change_percentage_1h_in_currency.toFixed(4),
       };
     });
     setData(apiInfo);
@@ -23,12 +23,12 @@ const ApiRest = () => {
 
   useEffect(() => {
     getApiInfo();
-  }, [data]);
+  }, []);
   return (
     <div>
-    <h1 className={styles.title}>TOP 10 COINS</h1>
-      <ul>
-        <li className={styles.coinInfo}>
+      <h1 className={styles.title}>TOP 10 COINS</h1>
+      <tr>
+        <td className={styles.coinInfo}>
           <div className={styles.nameDiv}>
             <div className={styles.id}>#</div>
             <div className={styles.name}>COIN</div>
@@ -36,39 +36,54 @@ const ApiRest = () => {
           <div className={styles.symbol}>SYMBOL</div>
           <div className={styles.currentPrice}>Current Price</div>
           <div className={styles.priceChange}>Price Change</div>
-          <div className={styles.priceChangePerHour}>Porcentage Change Per Hour</div>
-        </li>
+          <div className={styles.priceChangePerHour}>
+            Porcentage Change Per Hour
+          </div>
+        </td>
         {data
-          ? data.map((el) => {
+          ? data.map((el, index) => {
               return (
-                <li className={styles.listPrice}>
-                  <div className={styles.nameDiv}>
-                    <div className={styles.id}>{el.id}</div>
-                    <div className={styles.name}>{el.name}</div>
-                  </div>
+               
+                (
+                  <td className={styles.listPrice} key={index}>
+                    <div className={styles.nameDiv}>
+                      <div className={styles.id}>{el.id}</div>
+                      <div className={styles.name}>{el.name}</div>
+                    </div>
 
-                  <img className={styles.symbol}src={el.image} alt={el.name} />
-                  <div className={styles.currentPrice}> {el.currentPrice}</div>
-                  <div
-                    className={
-                      data.priceChanges > 0
-                        ? styles.priceChangeUp
-                        : styles.priceChangeDown
-                    }
-                  >
-                  $ {el.priceChange}
-                  </div>
-                  <div 
-                  className={
-                    data.priceChangesPerHour > 0 ? styles.priceChangePerHourUp : styles.priceChangePerHourDown 
-                   }>
-                    % {el.priceChangePerHour}
-                  </div>
-                </li>
+                    <img
+                      className={styles.symbol}
+                      src={el.image}
+                      alt={el.name}
+                    />
+                    <div className={styles.currentPrice}>
+                      {" "}
+                      {el.currentPrice}
+                    </div>
+                    <div
+                      className={
+                        (Math.sign(el.priceChange) < 0
+                          ? styles.priceChangeDown
+                          : styles.priceChangeUp)
+                      }
+                    >
+                      $ {el.priceChange}
+                    </div>
+                    <div
+                      className={
+                        Math.sign(el.priceChangePerHour) > 0
+                          ? styles.priceChangePerHourUp
+                          : styles.priceChangePerHourDown
+                      }
+                    >
+                      % {el.priceChangePerHour}
+                    </div>
+                  </td>
+                )
               );
             })
           : "...loading"}
-      </ul>
+      </tr>
     </div>
   );
 };

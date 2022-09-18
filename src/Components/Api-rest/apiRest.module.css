@@ -3,7 +3,7 @@
     text-align: center;
     color: white;
 }
-ul {
+tr {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +11,7 @@ ul {
 }
 
 .symbol {
-    width: 100px;
+    width: 120px;
 }
 .img {
     width: 100px;
@@ -27,7 +27,7 @@ ul {
     align-items: center;
     color: white;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 17px;
     background-color: rgb(41 49 85);
 }
 .listPrice {
@@ -42,6 +42,7 @@ ul {
 
 .nameDiv {
     display: flex;
+    width: 130px;
 }
 
 .id {
@@ -53,12 +54,12 @@ ul {
     
 }
 .currentPrice {
-    width: 120px;
+    width: 140px;
    text-align: center;
 }
 
 
-.priceChangeUp, .priceChangeDown, .priceChangePerHourDown, .priceChangePerHourUp, .priceChange, .priceChangePerHour {
+.priceChangeUp, .priceChangeDown, .priceChange, .priceChangePerHour, .priceChangePerHourUp, .priceChangePerHourDown {
     width: 230px;
 }
 
@@ -76,15 +77,15 @@ ul {
 }
 .priceChangePerHour {
     color: white;
+    
 }
 .priceChangePerHourUp{
     color: green;
-    padding-right: 30px;
+    
 }
 
 .priceChangePerHourDown{
     color: red;
-    padding-right: 30px;
 }
 
 
