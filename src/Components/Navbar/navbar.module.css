@@ -19,7 +19,7 @@
 }
 .navbarItem a {
     text-decoration: none;
-    color: white;
+    color: rgb(41 49 85);
 }
 .navbarItem a:hover {
     color: rgb(154, 154, 205);

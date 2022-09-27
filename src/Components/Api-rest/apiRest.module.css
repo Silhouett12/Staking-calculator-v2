@@ -6,7 +6,7 @@
 .title {
     font-weight: bold;
     text-align: center;
-    color: white;
+    color: rgb(41 49 85);
 }
 tr {
     display: flex;
@@ -28,21 +28,21 @@ tr {
     padding: 20px;
     margin-top: 60px;
     justify-content: space-between;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(41 49 85);
     align-items: center;
-    color: white;
+    color: rgb(41 49 85);
     font-weight: bolder;
     font-size: 17px;
-    background-color: rgb(41 49 85);
+    background-color: rgb(154, 154, 205);
 }
 .listPrice {
     display: flex;
     width: 80%;
     padding: 20px;
     justify-content: space-between;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(41 49 85);
     align-items: center;
-    color: white;
+    color: rgb(41 49 85);
 }
 
 .nameDiv {
@@ -78,10 +78,10 @@ tr {
 
 
 .priceChange {
-    color: white;
+    color: black;
 }
 .priceChangePerHour {
-    color: white;
+    color: black;
     
 }
 .priceChangePerHourUp{

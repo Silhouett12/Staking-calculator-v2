@@ -5,8 +5,8 @@
     padding: 30px;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 20px 60px rgb(41 49 85);
-    color: white;
+    box-shadow: 0 1px 10px rgb(41 49 85);
+    color: rgb(41 49 85);
 }
 section {
     padding: 30px;

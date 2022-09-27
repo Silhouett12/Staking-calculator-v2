@@ -14,7 +14,7 @@
 .title {
     font-weight: bold;
     text-align: center;
-    color: white;
+    color: rgb(41 49 85);
 }
 .calculatorContainer{
     display: block;
@@ -23,7 +23,7 @@
     padding: 30px;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 20px 60px rgb(41 49 85);
+    box-shadow: 0 20px 30px rgb(41 49 85);
 }
 
 .inputContainer {
@@ -37,12 +37,12 @@
     padding: 20px;
     font-weight: bold;
     font-size: 18px;
-    color: white
+    color: rgb(41 49 85)
 }
 input {
     width: 100%;
     color: #201f46;
-    background-color: white;
+    background-color: rgba(167, 174, 205, 0.598);
     border-radius: 5px;
     border: none;
     height: 40px;
@@ -52,8 +52,8 @@ input {
 }
 .button {
     font-size: 30px;
-    background-color: rgb(20, 21, 26);
-    color: white;
+    background-color: whitesmoke;
+    color: rgb(41 49 85);
     cursor: pointer;
 }
 .button:hover{
@@ -61,5 +61,5 @@ input {
 }
 .results {
     padding-top: 30px;
-    color: white;
+    color: rgb(41 49 85);
 }
