@@ -2,11 +2,8 @@
     display: flex;
     background-color: transparent;
     height: 70px;
-    margin-top: 50px;
-    margin-right: 10%;
-    margin-left: 10%;
     justify-content: right;
-    box-shadow: rgb(41 49 85) 0px 5px 15px;
+    box-shadow: rgb(41 49 85) 0px 1px 5px;
 }
 .navbarItem{
     
