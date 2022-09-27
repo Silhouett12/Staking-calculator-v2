@@ -33,7 +33,7 @@ tr {
     color: rgb(41 49 85);
     font-weight: bolder;
     font-size: 17px;
-    background-color: rgb(154, 154, 205);
+    background-color: rgba(167, 174, 205, 0.598);
 }
 .listPrice {
     display: flex;
@@ -78,10 +78,10 @@ tr {
 
 
 .priceChange {
-    color: black;
+    color: rgb(41 49 85);
 }
 .priceChangePerHour {
-    color: black;
+    color: rgb(41 49 85);
     
 }
 .priceChangePerHourUp{
