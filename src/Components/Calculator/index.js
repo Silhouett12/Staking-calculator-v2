@@ -49,10 +49,11 @@ const Calculator = () => {
               <div className={styles.buttonContainer}>
                 <button type="button" className={styles.button} onClick={calculate}>Calculate</button>
               </div>
-              <div className={styles.results}>
+              {result ? <div className={styles.results}>
                 Interest gained: {result} <br/>
                 in {input.days} days.
-              </div>
+              </div> : null
+              } 
             </form>
           </div>
         </section>
