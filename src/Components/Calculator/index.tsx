@@ -1,25 +1,35 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import styles from './calculator.module.css'
+
+
 
 const Calculator = () => {
 
-    const [input, setInput] = React.useState({
-        amount: '',
-        interest: '',
-        days: '',
-    })
-    const [result, setResult] = React.useState()
+  interface Calculator {
+        amount: number,
+          interest: number,
+          days: number,
+      
+  }
 
-    const handleInputChange = (e) => {
-        console.log(input.amount)
+    const [input, setInput] = React.useState<Calculator>({
+        amount: 0,
+        interest: 0,
+        days: 0,
+    })
+    const [result, setResult] = React.useState<any>(0)
+
+    const handleInputChange = (e:ChangeEvent<HTMLInputElement> ) => {
         setInput({
           ...input,
           [e.target.name]: e.target.value
         });
       }
-    const calculate = (e) => {
+    const calculate = () =>  {
         setResult((input.amount * (input.interest/36000) * input.days).toFixed(4))
     }
+
+    console.log(input)
   return (
     <>
       <div> </div>
@@ -47,7 +57,7 @@ const Calculator = () => {
                 </div>
               </div>
               <div className={styles.buttonContainer}>
-                <button type="button" className={styles.button} onClick={calculate}>Calculate</button>
+                <button type="button" className={styles.button} onClick={()=>calculate()}>Calculate</button>
               </div>
               {result ? <div className={styles.results}>
                 Interest gained: {result} <br/>
