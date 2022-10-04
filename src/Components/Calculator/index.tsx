@@ -29,7 +29,7 @@ const Calculator = () => {
         setResult((input.amount * (input.interest/36000) * input.days).toFixed(4))
     }
 
-    console.log(input)
+    
   return (
     <>
       <div> </div>

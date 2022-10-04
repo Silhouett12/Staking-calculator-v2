@@ -27,15 +27,14 @@ const ApiRest = () => {
         name: e.name,
         image: e.image,
         currentPrice: e.current_price,
-        priceChange: e.price_change_24h.toFixed(6),
-        priceChangePerHour: e.price_change_percentage_1h_in_currency.toFixed(4),
+        priceChange: e.price_change_24h,
+        priceChangePerHour: e.price_change_percentage_24h,
       };
     });
     setData(apiInfo);
   };
 
-  console.log(data)
-
+ 
   useEffect(() => {
     getApiInfo();
   }, [])
@@ -43,6 +42,7 @@ const ApiRest = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       getApiInfo();
+      
     }, 10000);
     return () => {
       clearInterval(interval) 
@@ -62,7 +62,7 @@ const ApiRest = () => {
           <div className={styles.currentPrice}>Current Price</div>
           <div className={styles.priceChange}>Price Change</div>
           <div className={styles.priceChangePerHour}>
-            Porcentage Change Per Hour
+            Porcentage Change Per Day
           </div>
         </div>
         {data
