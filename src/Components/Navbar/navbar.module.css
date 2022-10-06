@@ -1,24 +1,58 @@
-.navbarContainer{
-    display: flex;
-    background-color: transparent;
-    height: 70px;
-    justify-content: right;
-    box-shadow: rgb(41 49 85) 0px 1px 5px;
-    background-color: white;
+.NavLink {
+  text-decoration: none;
+  color: #282936;
+  align-self: center;
 }
-.navbarItem{
-    
-    font-size: 30px;
-    text-align: center;
-    align-self: flex-end;
-    cursor: pointer;
-    padding-right: 50px;
-    padding-bottom: 15px;
+
+.navbarDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
 }
-.navbarItem a {
-    text-decoration: none;
-    color: rgb(41 49 85);
+
+.mainDiv {
+  width: 90rem;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: rgba(41, 49, 85, 0.655) 1px solid;
 }
-.navbarItem a:hover {
-    color: rgb(154, 154, 205);
+
+.groupDiv {
+  display: flex;
+  align-items: center;
+}
+
+.navbarButton {
+  display: flex;
+  align-items: center;
+  background: white;
+  color: rgba(0, 0, 0, 0.498);
+  font-size: 2rem;
+  font: arial;
+  width: 100px;
+  height: 50%;
+  border: 0.1px solid rgba(0, 0, 0, 0.089);
+  margin-right: 20px;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.navbarButton:hover {
+  background: rgb(41 49 85);
+  color: white;
+}
+.navbarButton a,
+span {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  line-height: 30px;
+  color: rgb(41 49 85);
+}
+.navbarButton a:hover {
+  color: inherit;
 }

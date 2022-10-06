@@ -1,16 +1,15 @@
-.descriptionContainer{
-    display: block;
-    height: auto;
-    width: auto;
-    padding: 30px;
-    align-items: center;
-    justify-content: center;
-    color: rgb(95, 107, 156);
-    font-size: 18px;
+.descriptionContainer {
+  display: block;
+  height: auto;
+  width: 90rem;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(95, 107, 156);
+  font-size: 18px;
 }
 section {
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import Calculator from './Components/Calculator';
 import Description from './Components/Description';
 import ApiRest from './Components/Api-rest';
+import Footer from './Components/Footer';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <Navbar/>
       <Calculator/>
       <Description/>
-      <ApiRest/>    
+      <ApiRest/> 
+      <Footer/>   
     </>
   );
 }

@@ -1,107 +1,111 @@
 .mainDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .title {
-    font-weight: bold;
-    text-align: center;
-    color: rgb(41 49 85);
+  font-weight: bold;
+  text-align: center;
+  color: rgb(41 49 85);
+  width: 90rem;
+  align-self: center;
+  padding-top: 20px;
+  border-top: rgb(41 49 85) solid 1px;
 }
 tr {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
 }
 
 .symbol {
-    width: 120px;
+  width: 120px;
 }
 .img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 .coinInfo {
-    display: flex;
-    width: 80%;
-    padding: 20px;
-    margin-top: 60px;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(41 49 85);
-    align-items: center;
-    color: rgb(41 49 85);
-    font-weight: bolder;
-    font-size: 17px;
-    background-color: rgba(167, 174, 205, 0.598);
+  display: flex;
+  width: 70rem;
+  padding: 20px;
+  margin-top: 60px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(41 49 85);
+  align-items: center;
+  color: rgb(41 49 85);
+  font-weight: bolder;
+  font-size: 17px;
+  background-color: rgba(167, 174, 205, 0.598);
 }
 .listPrice {
-    display: flex;
-    width: 80%;
-    padding: 20px;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(41 49 85);
-    align-items: center;
-    color: rgb(41 49 85);
+  display: flex;
+  width: 70rem;
+  padding: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(41 49 85);
+  align-items: center;
+  color: rgb(41 49 85);
 }
 
 .nameDiv {
-    display: flex;
-    width: 130px;
+  display: flex;
+  width: 130px;
 }
 
 .id {
-    width: 30px;
-      
+  width: 30px;
 }
 .name {
-    width: 70px;
-    
+  width: 70px;
 }
 .currentPrice {
-    width: 140px;
-   text-align: center;
+  width: 140px;
+  text-align: center;
 }
 
-
-.priceChangeUp, .priceChangeDown, .priceChange, .priceChangePerHour, .priceChangePerHourUp, .priceChangePerHourDown {
-    width: 230px;
+.priceChangeUp,
+.priceChangeDown,
+.priceChange,
+.priceChangePerHour,
+.priceChangePerHourUp,
+.priceChangePerHourDown {
+  width: 230px;
 }
 
-.priceChangeUp{
-    color: green;
+.priceChangeUp {
+  color: green;
 }
 
-.priceChangeDown{ 
-    color: red; 
+.priceChangeDown {
+  color: red;
 }
-
 
 .priceChange {
-    color: rgb(41 49 85);
+  color: rgb(41 49 85);
 }
 .priceChangePerHour {
-    color: rgb(41 49 85);
-    
+  color: rgb(41 49 85);
 }
-.priceChangePerHourUp{
-    color: green;
-    
+.priceChangePerHourUp {
+  color: green;
 }
 
-.priceChangePerHourDown{
-    color: red;
+.priceChangePerHourDown {
+  color: red;
 }
-
 
 @media (max-width: 1024px) {
+  .priceChange,
+  .priceChangePerHour {
+    display: none;
+  }
 
-    .priceChange, .priceChangePerHour {
-        display: none;
-    }
-
-    .priceChangeUp, .priceChangeDown, .priceChangePerHourDown, .priceChangePerHourUp {
-        display: none;
-    }
-
+  .priceChangeUp,
+  .priceChangeDown,
+  .priceChangePerHourDown,
+  .priceChangePerHourUp {
+    display: none;
+  }
 }

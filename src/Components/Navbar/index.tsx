@@ -1,16 +1,25 @@
-import React from 'react'
-import styles from './navbar.module.css'
+import React from "react";
+import styles from "./navbar.module.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <>
-        <div className={styles.navbarContainer}>
-            <div className={styles.navbarItem}>
-                <a href='https://pablolamadrid.netlify.app/'>My page</a>
-            </div>
+    <header className={styles.navbarDiv}>
+      <nav className={styles.mainDiv}>
+        <div className={styles.logoDiv}></div>
+        <div className={styles.groupDiv}>
+          <button className={styles.navbarButton}>
+            <a
+              className={styles.NavLink}
+              href={"https://pablolamadrid.netlify.app/"}
+            >
+              Portfolio
+            </a>
+          </button>
         </div>
-    </>
-  )
-}
+      </nav>
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;
