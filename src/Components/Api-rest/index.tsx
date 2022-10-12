@@ -23,7 +23,7 @@ const ApiRest = () => {
         id: e.market_cap_rank,
         name: e.name,
         image: e.image,
-        currentPrice: e.current_price,
+        currentPrice: e.current_price.toFixed(2),
         priceChange: e.price_change_24h,
         priceChangePerHour: e.price_change_percentage_24h,
       };
@@ -47,13 +47,14 @@ const ApiRest = () => {
   return (
     <>
       <div className={styles.mainDiv}>
+        <div className={styles.tableContainer}>
         <h1 className={styles.title}>TOP 10 COINS</h1>
         <div className={styles.coinInfo}>
           <div className={styles.nameDiv}>
             <div className={styles.id}>#</div>
             <div className={styles.name}>COIN</div>
           </div>
-          <div className={styles.symbol}>SYMBOL</div>
+          <div className={styles.symbolName}>SYMBOL</div>
           <div className={styles.currentPrice}>Current Price</div>
           <div className={styles.priceChange}>Price Change</div>
           <div className={styles.priceChangePerHour}>
@@ -93,6 +94,7 @@ const ApiRest = () => {
               );
             })
           : "...loading"}
+          </div>
       </div>
     </>
   );

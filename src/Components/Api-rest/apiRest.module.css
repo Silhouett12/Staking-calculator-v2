@@ -3,11 +3,19 @@
   flex-direction: column;
   align-items: center;
 }
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
 .title {
   font-weight: bold;
   text-align: center;
   color: rgb(41 49 85);
-  width: 90rem;
+  width: 70%;
   align-self: center;
   padding-top: 20px;
   border-top: rgb(41 49 85) solid 1px;
@@ -61,7 +69,7 @@ tr {
   width: 70px;
 }
 .currentPrice {
-  width: 140px;
+  width: 20%;
   text-align: center;
 }
 
@@ -107,5 +115,24 @@ tr {
   .priceChangePerHourDown,
   .priceChangePerHourUp {
     display: none;
+  }
+  .symbol {
+    width: 30px;
+  }
+  .symbolName {
+    width: 60px;
+  }
+  .listPrice {
+    width: 70% !important;
+  }
+  .coinInfo{
+    width: 70%;
+
+  }
+  .symbol {
+    font-size: 12px;
+  }
+  .tableContainer {
+    width: 100%;
   }
 }

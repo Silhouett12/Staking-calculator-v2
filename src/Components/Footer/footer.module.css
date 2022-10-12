@@ -8,7 +8,7 @@
 }
 .footerInfo {
     display: flex;
-    width: 90rem;
+    width: 70%;
     height: 90px;
     border-top: 0.1px solid rgba(41, 49, 85, 0.485);
     justify-content: space-between;
