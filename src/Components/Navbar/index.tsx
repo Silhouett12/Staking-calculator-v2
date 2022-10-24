@@ -11,7 +11,7 @@ const Navbar = () => {
           <button className={styles.navbarButton}>
             <a
               className={styles.NavLink}
-              href={"https://pablolamadrid.netlify.app/"}
+              href={"https://pablolamadrid.vercel.app/"}
             >
               Portfolio
             </a>
